@@ -1,9 +1,9 @@
-const React = require('react');
+const React = require('react')
+const Nav = require('../../components/nav/Nav.js')
 
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
-
 
 		this.click = this.click.bind(this);
 	}
@@ -15,8 +15,8 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
+				<Nav />
 				<span onClick={this.click}>APP</span>
-				<a href="/page1">page1</a>
 			</div>
 		);
 	}

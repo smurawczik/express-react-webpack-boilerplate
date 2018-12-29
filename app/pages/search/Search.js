@@ -1,4 +1,5 @@
-const React = require('react');
+const React = require('react')
+const Nav = require('../../components/nav/Nav.js')
 
 class Search extends React.Component {
 	constructor(props) {
@@ -12,7 +13,7 @@ class Search extends React.Component {
 	render() {
 		return (
 			<div id="main">
-				<a href="/" id="link">return</a>
+				<Nav />
 				<p>{this.state.text}</p>
 			</div>
 		);
