@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start-dev": "NODE_ENV=development nodemon ./dist/index.js",
-    "start": "NODE_ENV=production nodemon ./dist/index.js"
+    "start-dev": "NODE_ENV=development nodemon ./build/index.js",
+    "start": "NODE_ENV=production nodemon ./build/index.js"
   },
   "keywords": [],
   "author": "",

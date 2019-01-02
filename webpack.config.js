@@ -12,12 +12,12 @@ module.exports = [
       page1: './app/pages/search/Search.hydrate.js',
     },
     plugins: [
-      new CleanWebpackPlugin(['dist']),
+      new CleanWebpackPlugin(['build']),
     ],
     mode: 'development',
   	output: {
   		filename: 'scripts/[name].bundle.js',
-  	  path: path.resolve(__dirname, 'dist')
+  	  path: path.resolve(__dirname, 'build')
   	},
     module: {
       rules: [
@@ -55,7 +55,7 @@ module.exports = [
     mode: 'development',
     output: {
       filename: 'index.js',
-      path: path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'build')
     },
     target: 'node',
     module: {

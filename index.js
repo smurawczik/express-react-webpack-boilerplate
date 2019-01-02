@@ -6,7 +6,7 @@ const searchRoutes = require('./routes/search');
 const app = express()
 const port = 4400;
 
-app.use(express.static('dist'))
+app.use(express.static('build'))
 
 app.use(homeRoutes)
 app.use(searchRoutes)
