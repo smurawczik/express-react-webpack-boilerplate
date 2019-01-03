@@ -3,9 +3,15 @@
 @import './_material-colors-get.scss';
 
 @import '../components/nav/Nav.scss';
+@import '../components/card/Card.scss';
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
 
 body {
-	color: $text-secondary;
+	background-color: material-color($primary, '800');
+	color: $text-primary;
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
@@ -17,5 +23,5 @@ a {
 }
 
 a:visited {
-	color: $text-secondary;
+	color: $text-primary;
 }

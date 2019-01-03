@@ -3,16 +3,17 @@
 
 .navigation {
 	padding: ($gutter * 3) ($gutter * 2) ($gutter * 4);
-	@include linear-gradient(darken(material-color($primary, '800'), 5%), material-color($primary, '900'));
+	text-align: center;
 	.navigation-link {
 		color: $text-primary;
 		display: inline-block;
-		padding: $l-gutter $gutter;
+		padding: $l-gutter ($gutter * 2);
 		margin-right: ($gutter * 2);
 		font-weight: 300;
 		border-bottom: 3px solid transparent;
-		&:hover, &--active {
-			border-bottom-color: material-color($secondary, '500');
+
+		&--active, &:hover {
+			border-bottom: 3px solid material-color($secondary, '500');
 		}
 	}
 }

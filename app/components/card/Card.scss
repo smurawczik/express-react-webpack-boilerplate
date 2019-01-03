@@ -1,0 +1,13 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
+.card {
+	border-radius: 0 0 4px 4px;
+	background-color: darken(material-color($primary, '800'), 5%);
+	max-width: 50%;
+	margin: auto;
+	box-shadow: 0 2px 3px rgba(255, 255, 255, 0.2);
+	padding: $l-gutter ($gutter * 2);
+	font-weight: 200;
+	border-top: 3px solid material-color($secondary, '800');
+}
