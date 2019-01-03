@@ -15,7 +15,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<Nav />
+				<Nav path={this.props.path} />
 				<span onClick={this.click}>APP</span>
 			</div>
 		);

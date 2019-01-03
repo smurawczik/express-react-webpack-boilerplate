@@ -13,7 +13,7 @@ class Search extends React.Component {
 	render() {
 		return (
 			<div id="main">
-				<Nav />
+				<Nav path={this.props.path} />
 				<p>{this.state.text}</p>
 			</div>
 		);

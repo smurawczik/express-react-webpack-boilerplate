@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import './_variables.scss';
 @import './_material-colors-get.scss';
 
 @import '../components/nav/Nav.scss';
 
 body {
-	background-color: material-color('red', '600');
-	color: #FFF;
+	color: $text-secondary;
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
@@ -17,5 +17,5 @@ a {
 }
 
 a:visited {
-	color: #FFF;
+	color: $text-secondary;
 }
