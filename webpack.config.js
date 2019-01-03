@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-
 module.exports = [
   {
     entry: {
@@ -19,7 +18,7 @@ module.exports = [
     ],
     mode: 'development',
   	output: {
-  		filename: 'scripts/[name].bundle.js',
+  		filename: '[name].js',
   	  path: path.resolve(__dirname, 'build')
   	},
     module: {

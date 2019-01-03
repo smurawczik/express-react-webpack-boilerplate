@@ -7,7 +7,7 @@ const { getRandomFacts } = require('../../api/random.facts')
 exports.render = (req, res, next) => {
   getRandomFacts().then(response => {
     const container = ReactDOMServer.renderToString(<Search text={response.data.text} />)
-    res.send(template({container, data: response.data, scripts: ['scripts/page1.bundle.js']}));
+    res.send(template({container, data: response.data, bundle: ['page1']}));
   }).catch(() => {
   	throw new Error({status: 404});
 	})
