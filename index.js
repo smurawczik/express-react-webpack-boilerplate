@@ -2,14 +2,14 @@ const express = require('express')
 const ReactDOMServer = require('react-dom/server')
 const React = require('react')
 const homeRoutes = require('./routes/home');
-const searchRoutes = require('./routes/search');
+const randomFactRoutes = require('./routes/random-fact');
 const app = express()
 const port = 4400;
 
 app.use(express.static('build'))
 
 app.use(homeRoutes)
-app.use(searchRoutes)
+app.use(randomFactRoutes)
 
 app.use((err, req, res, next) => {
 	console.log(err);

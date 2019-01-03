@@ -1,3 +1,16 @@
-span {
-	
+@import '../../styles/_material-colors-get.scss';
+
+.navigation {
+	padding: 0 24px;
+	background-color: material-color('grey', '900');
+	.navigation-link {
+		color: material-color('yellow', '700');
+		display: inline-block;
+		padding: 18px 12px;
+		font-weight: 300;
+		border-bottom: 3px solid transparent;
+		&:hover {
+			border-bottom-color: material-color('red', '800');
+		}
+	}
 }

@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const controller = require('./controller')
-const { pagesURL } = require('../../config/')
+const { pages } = require('../../config/')
 
-router.get(`${pagesURL.home}`, controller.render);
+router.get(`${pages.home.path}`, controller.render);
 
 module.exports = router;

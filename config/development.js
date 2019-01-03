@@ -7,7 +7,13 @@ exports.catFactsConfig = {
 	randomFactsPath: '/facts/random'
 }
 
-exports.pagesURL = {
-	home: '/',
-	search: '/search'
+exports.pages = {
+	home: {
+		path: '/',
+		text: 'Home'
+	},
+	randomFact: {
+		path: '/random-fact',
+		text: 'Random Fact'
+	}
 }

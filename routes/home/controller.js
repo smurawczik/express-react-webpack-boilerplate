@@ -5,5 +5,5 @@ const template = require('../../views/main')
 
 exports.render = (req, res, next) => {
   const container = ReactDOMServer.renderToString(<Home />)
-  res.send(template({container, scripts: ['app']}));
+  res.send(template({container, bundle: ['app']}));
 }

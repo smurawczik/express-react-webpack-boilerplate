@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodeExternals = require('webpack-node-externals');
@@ -47,7 +46,8 @@ module.exports = [
           test: /\.(s)*css$/,
           use: [
             MiniCssExtractPlugin.loader,
-            "css-loader"
+            "css-loader",
+            "sass-loader",
           ]
         }
       ]

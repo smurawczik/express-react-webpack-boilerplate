@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import './_material-colors-get.scss';
+
+@import '../components/nav/Nav.scss';
+
+body {
+	background-color: material-color('red', '600');
+	color: #FFF;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto';
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFF;
+}

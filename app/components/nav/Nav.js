@@ -1,13 +1,17 @@
 const React = require('react')
-const { pagesURL } = require('../../../config/')
-import homeIcon from '../../assets/002-home2.svg';
+const { pages } = require('../../../config/')
 
 const Nav = () => {
+	const pagesKeys = Object.keys(pages);
+
 	return (
-		<div>
-			<a href={pagesURL.home}><img src={homeIcon} /></a>
-			<span>{' | '}</span>
-			<a href={pagesURL.search}>search</a>
+		<div className='navigation'>
+			{
+				pagesKeys.map((key, i)  => {
+					const pipe = i < pagesKeys.length - 1 ? " | " : null;
+					return <a key={i} className='navigation-link' href={pages[key].path}>{pages[key].text}</a>
+				})
+			}
 		</div>
 	);
 }
