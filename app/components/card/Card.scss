@@ -3,11 +3,24 @@
 
 .card {
 	border-radius: 0 0 4px 4px;
-	background-color: darken(material-color($primary, '800'), 5%);
-	max-width: 50%;
-	margin: auto;
-	box-shadow: 0 2px 3px rgba(255, 255, 255, 0.2);
+	background-color: white;
+	box-shadow: $common-shadow;
 	padding: $l-gutter ($gutter * 2);
+	transition: all .2s;
 	font-weight: 200;
-	border-top: 3px solid material-color($secondary, '800');
+
+	&.card {
+		&--bordered-primary {
+			border-top: 3px solid material-color($primary, '700');
+		}
+		
+		&--bordered-secondary {
+			border-top: 3px solid material-color($secondary, '500');
+		}
+
+		&--hover:hover {
+			box-shadow: 0 25px 20px 0 rgba(0,0,0,.16);
+		}
+	}
+
 }

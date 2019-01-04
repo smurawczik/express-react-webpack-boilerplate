@@ -1,9 +1,15 @@
 const React = require('react')
-const { pages } = require('../../../config/')
+const classnames = require('classnames')
 
 const Card = (props) => {
+	const classes = classnames('card', {
+		'card--bordered-primary': props.borderedPrimary,
+		'card--bordered-secondary': props.borderedSecondary,
+		'card--hover': props.hover
+	})
+
 	return (
-		<div className='card'>
+		<div className={classes}>
 			{props.children}
 		</div>
 	);

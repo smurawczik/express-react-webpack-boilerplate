@@ -2,20 +2,29 @@
 @import './_variables.scss';
 @import './_material-colors-get.scss';
 
-@import '../components/nav/Nav.scss';
-@import '../components/card/Card.scss';
+@import '../components/Nav/Nav.scss';
+@import '../components/Button/Button.scss';
+@import '../components/Section/Section.scss';
+@import '../components/Card/Card.scss';
+@import '../components/List/List.scss';
 
 *, ::after, ::before {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: material-color($primary, '800');
+	background-color: #EEE;
 	color: $text-primary;
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto';
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
 a {

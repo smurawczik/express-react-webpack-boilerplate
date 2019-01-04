@@ -1,0 +1,21 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
+.section {
+	max-width: 1024px;
+	margin: auto;
+	padding: 0;
+	&.section {
+		&--padding {
+			padding: $l-gutter $l-gutter * 2;
+		}
+
+		&--width-padding {
+			padding: 0 ($l-gutter);
+		}
+
+		&--height-padding {
+			padding: ($l-gutter) 0;
+		}
+	}
+}

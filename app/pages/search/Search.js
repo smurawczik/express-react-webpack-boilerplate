@@ -1,5 +1,5 @@
 const React = require('react')
-const Nav = require('../../components/nav/Nav.js')
+const Nav = require('../../components/Nav/Nav.js')
 
 class Search extends React.Component {
 	constructor(props) {

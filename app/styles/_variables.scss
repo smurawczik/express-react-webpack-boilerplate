@@ -5,8 +5,10 @@ $l-gutter: 16px;
 $primary: 'grey';
 $secondary: 'red';
 
-$text-primary: white;
-$text-secondary: black;
+$text-primary: #555;
+$text-secondary: #FFF;
+
+$common-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 
 @mixin linear-gradient($from, $to) {
   background: $to;
