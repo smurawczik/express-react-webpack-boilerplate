@@ -5,26 +5,40 @@ class Input extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.onInput = this.onInput.bind(this);
+		this.onChange = this.onChange.bind(this);
+
+		this.state = {
+			value: props.value,
+			error: false,
+		}
 	}
 
-	onInput(e) {
-		const { onInput } = this.props;
+	onChange(e) {
+		const { onChange } = this.props;
+		const { target } = e;
 
-		onInput && onInput(e);
+		this.setState({
+			value: target.value
+		});
+
+		onChange && onChange(e);
 	}
 
 	render() {
+		const { type, label, message, id } = this.props;
+		const { value } = this.state;
+
 		const containerClasses = classnames('input');
 		const labelClasses = classnames('input-label');
-		const inputClasses = classnames('input-field');
+		const inputClasses = classnames('input-field', {
+			'input--has-value': value
+		});
 		const borderClasses = classnames('input-border');
 
-		const { type, label, message, id } = this.props;
 
 		return (
 			<div className={containerClasses}>
-				<input className={inputClasses} id={id} type={type} onInput={this.onInput} />
+				<input className={inputClasses} id={id} type={type} onChange={this.onChange} value={value} />
 				<label className={labelClasses} htmlFor={id}>{label}</label>
 				<div className={borderClasses}></div>
 				{ message && <span>{message}</span> }
@@ -37,6 +51,7 @@ Input.defaultProps = {
   type: 'text',
   label: '',
   id: '',
+  value: '',
 }
 
 module.exports = Input;
