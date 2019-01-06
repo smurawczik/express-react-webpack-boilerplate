@@ -3,4 +3,4 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const Home = require('./Home');
 
-ReactDOM.hydrate(<Home />, document.getElementById('root'));
+ReactDOM.hydrate(<Home path={window.__PATH__} />, document.getElementById('root'));

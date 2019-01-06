@@ -1,6 +1,6 @@
 const utilities = require('./common/');
 
-module.exports = ({container, title, bundle, styles, scripts, data}) => {
+module.exports = ({container, title, bundle, styles, scripts, data, request}) => {
   return (`
     <!DOCTYPE html>
       <html>
@@ -9,7 +9,7 @@ module.exports = ({container, title, bundle, styles, scripts, data}) => {
         <title>${title || 'Default title'}</title>
         ${utilities.linkTags(bundle)}
         ${utilities.linkTags(styles)}
-        ${utilities.initialData(data)}
+        ${utilities.initialData(data, request)}
       </head>
       <body>
         <div id="root">${container}</div>

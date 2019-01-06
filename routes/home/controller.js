@@ -4,6 +4,6 @@ const Home = require('../../app/pages/home/Home')
 const template = require('../../views/main')
 
 exports.render = (req, res, next) => {
-  const container = ReactDOMServer.renderToString(<Home />)
-  res.send(template({container, bundle: ['app']}));
+  const container = ReactDOMServer.renderToString(<Home path={req.path} />)
+  res.send(template({container, request: req, bundle: ['app']}));
 }

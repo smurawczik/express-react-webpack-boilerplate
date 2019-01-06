@@ -1,0 +1,26 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
+.card {
+	border-radius: 0 0 4px 4px;
+	background-color: white;
+	box-shadow: $common-shadow;
+	padding: $l-gutter ($gutter * 2);
+	transition: all .2s;
+	font-weight: 200;
+
+	&.card {
+		&--bordered-primary {
+			border-top: 3px solid material-color($primary, '700');
+		}
+		
+		&--bordered-secondary {
+			border-top: 3px solid material-color($secondary, '500');
+		}
+
+		&--hover:hover {
+			box-shadow: 0 25px 20px 0 rgba(0,0,0,.16);
+		}
+	}
+
+}

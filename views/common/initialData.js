@@ -1,5 +1,6 @@
-module.exports = (data) => {
-	return data ? `<script>
-    window.__INITIAL__ = ${data ? JSON.stringify(data) : JSON.stringify({})}
-  </script>` : '';
+module.exports = (data, req) => {
+	return `<script>
+	${req ? 'window.__PATH__ = ' + JSON.stringify(req.path) + ';' : ''}
+	${data ? 'window.__INITIAL__ = ' + JSON.stringify(data) + ';' : ''}
+  </script>`;
 }

@@ -1,5 +1,5 @@
 const React = require('react')
-const Nav = require('../../components/nav/Nav.js')
+const Nav = require('../../components/Nav/Nav.js')
 
 class Search extends React.Component {
 	constructor(props) {
@@ -13,7 +13,7 @@ class Search extends React.Component {
 	render() {
 		return (
 			<div id="main">
-				<Nav />
+				<Nav path={this.props.path} />
 				<p>{this.state.text}</p>
 			</div>
 		);
