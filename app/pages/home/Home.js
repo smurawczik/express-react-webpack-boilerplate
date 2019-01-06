@@ -4,6 +4,7 @@ const Card = require('../../components/Card/Card.js')
 const Section = require('../../components/Section/Section.js')
 const Button = require('../../components/Button/Button.js')
 const List = require('../../components/List/List.js')
+const { Input } = require('../../components/Form/')
 const ListItem = require('../../components/List/ListItem.js')
 
 class Home extends React.Component {
@@ -22,21 +23,22 @@ class Home extends React.Component {
 			<div>
 				<Nav path={this.props.path} />
 				<Section padding>
-					<Card borderedSecondary>Card</Card>
-					<Section heightPadding>
-						<Button primary> primary </Button>
-					</Section>
+					<Card borderedSecondary>
+						<span>Card</span>
+						<Section heightPadding>
+							<Button primary> primary </Button>
+							<Button secondary raised> secondary raised </Button>
+						</Section>
+						<Section heightPadding>
+							<Input id='some-id' label='label' />
+						</Section>
+					</Card>
 					<Section heightPadding>
 						<Button secondary> secondary </Button>
-					</Section>
-					<Section heightPadding>
-						<Button primary rounded> primary rounded </Button>
-					</Section>
-					<Section heightPadding>
-						<Button secondary small> secondary small </Button>
-					</Section>
-					<Section heightPadding>
-						<Button primary large> primary large </Button>
+						<Button primary outline> primary outline </Button>
+						<Button secondary outline> secondary outline </Button>
+						<Button primary text> primary text </Button>
+						<Button secondary text> secondary text </Button>
 					</Section>
 					<Section>
 						<List>

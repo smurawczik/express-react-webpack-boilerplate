@@ -3,7 +3,7 @@
 
 .navigation {
 	padding: ($gutter * 3) ($gutter * 2) ($gutter * 4);
-	background-color: material-color($primary, '800');
+	background-color: material-color($background, '800');
 	text-align: center;
 	.navigation-link {
 		color: $text-secondary;

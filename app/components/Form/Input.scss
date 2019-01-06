@@ -1,0 +1,52 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
+.input {
+	position: relative;
+	.input {
+		&-label {
+			position: absolute;
+			top: $s-gutter;
+			left: ($s-gutter / 2);
+			font-size: 16px;
+			font-weight: 300;
+			transition: all .15s;
+		}
+
+		&-field {
+			border: 0;
+			border-bottom: 1px solid material-color($background, '300');
+			padding: $s-gutter ($s-gutter / 2);
+			font-size: 16px;
+			position: relative;
+			width: 100%;
+
+			&:focus {
+				outline: 0;
+
+				& + .input-label {
+					top: -($s-gutter * 1.5);
+					left: 0;
+					transform: scale(.75);
+					& + .input-border:before {
+						width: 100%;
+						left: 0;
+					}
+				}
+			}
+		}
+
+		&-border {
+			&:before {
+				transition: all .25s;
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				left: 50%;
+				background-color: material-color($primary, '500');
+				bottom: 0;
+			}
+		}
+	}
+}

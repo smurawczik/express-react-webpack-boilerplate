@@ -8,27 +8,57 @@
 	cursor: pointer;
 	border: 0;
 	border-radius: 3px;
+	font-weight: 500;
 	&.button {
 		&--primary {
-			background-color: material-color($primary, '800');
+			background-color: material-color($primary, '500');
+			border: 2px solid material-color($primary, '500');
 			color: $text-secondary;
 		}
 
 		&--secondary {
 			background-color: material-color($secondary, '500');
+			border: 2px solid material-color($secondary, '500');
 			color: $text-secondary;
 		}
 
-		&--rounded {
-			border-radius: 8px;
+		&--outline {
+			background-color: transparent;
+			border-width: 2px;
+			border-style: solid;
+			box-shadow: none;
+			&.button--primary {
+				color: material-color($primary, '500');
+				border-color: material-color($primary, '500');
+			}
+
+			&.button--secondary {
+				color: material-color($secondary, '500');
+				border-color: material-color($secondary, '500');
+			}
 		}
 
-		&--small {
-			padding: ($gutter / 2) $gutter;
+		&--raised {
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+			transition: all .3s;
+
+			&:focus {
+				outline: 0;
+				box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.4);
+			}
 		}
 
-		&--large {
-			padding: $gutter * 2 ($gutter * 4);
+		&--text {
+			border-color: transparent;
+			background-color: transparent;
+			box-shadow: none;
+			&.button--primary {
+				color: material-color($primary, '500');
+			}
+
+			&.button--secondary {
+				color: material-color($secondary, '500');
+			}
 		}
 	}
 }
