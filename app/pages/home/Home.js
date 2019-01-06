@@ -26,11 +26,14 @@ class Home extends React.Component {
 					<Card borderedSecondary>
 						<span>Card</span>
 						<Section heightPadding>
-							<Button primary> primary </Button>
-							<Button secondary raised> secondary raised </Button>
+							<Input id='some-id' label='label' />
 						</Section>
 						<Section heightPadding>
-							<Input id='some-id' label='label' />
+							<Input id='some-id' label='label' value='some value' />
+						</Section>
+						<Section heightPadding>
+							<Button primary raised> primary raised</Button>
+							<Button primary text> secondary text </Button>
 						</Section>
 					</Card>
 					<Section heightPadding>
