@@ -22,29 +22,32 @@ class Home extends React.Component {
 			<div>
 				<Nav path={this.props.path} />
 				<Section padding>
-					<Card borderedSecondary>
-						<Section heightPadding>
-							<Button primary> app </Button>
-						</Section>
-						<Section heightPadding>
-							<Button secondary> app </Button>
-						</Section>
-						<Section heightPadding>
-							<Button primary rounded> app </Button>
-						</Section>
-						<Section heightPadding>
-							<Button secondary small> app </Button>
-						</Section>
-						<Section heightPadding>
-							<Button primary large> app </Button>
-						</Section>
-					</Card>
-					<List selectable>
-						<ListItem>1</ListItem>
-						<ListItem>2</ListItem>
-						<ListItem>3</ListItem>
-						<ListItem>4</ListItem>
-					</List>
+					<Card borderedSecondary>Card</Card>
+					<Section heightPadding>
+						<Button primary> primary </Button>
+					</Section>
+					<Section heightPadding>
+						<Button secondary> secondary </Button>
+					</Section>
+					<Section heightPadding>
+						<Button primary rounded> primary rounded </Button>
+					</Section>
+					<Section heightPadding>
+						<Button secondary small> secondary small </Button>
+					</Section>
+					<Section heightPadding>
+						<Button primary large> primary large </Button>
+					</Section>
+					<Section>
+						<List>
+							<ListItem>1</ListItem>
+							<ListItem>2</ListItem>
+						</List>
+						<List selectable>
+							<ListItem>1</ListItem>
+							<ListItem>2</ListItem>
+						</List>
+					</Section>
 				</Section>
 			</div>
 		);

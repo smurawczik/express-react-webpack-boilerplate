@@ -11,9 +11,7 @@ class List extends React.Component {
 	onListItemClick(e, index) {
 		const { onListItemClick } = this.props;
 
-		console.warn(e.target, index);
-
-		onListItemClick && onListItemClick(e);
+		onListItemClick && onListItemClick({ target: e.target, index });
 	}
 
 	render() {
