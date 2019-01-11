@@ -4,7 +4,8 @@ const Card = require('../../components/Card/Card.js')
 const Section = require('../../components/Section/Section.js')
 const Button = require('../../components/Button/Button.js')
 const List = require('../../components/List/List.js')
-const { Input } = require('../../components/Form/')
+const { Input, Checkbox, Radio } = require('../../components/Form/')
+const { Row, Column } = require('../../components/Layout/')
 const ListItem = require('../../components/List/ListItem.js')
 
 class Home extends React.Component {
@@ -28,8 +29,22 @@ class Home extends React.Component {
 						<Section heightPadding>
 							<Input id='some-id' label='label' />
 						</Section>
-						<Section heightPadding>
+						<Section>
 							<Input id='some-id' label='label' value='some value' />
+							<Checkbox id='other' label='label' />
+							<Checkbox id='other-2' label='label 2' />
+							<Checkbox id='other-3' label='label 3' />
+						</Section>
+						<Section>
+							<Column>
+								{'COLUMNS'}
+								<Radio name='na1' id='sasa' label='label' />
+								<Row justifyCenter alignCenter>
+									{'ROWS '}
+									<Radio name='na1' id='sasa-2' label='label 2' />
+									<Radio name='na1' id='sasa-3' label='label 3' />
+								</Row>
+							</Column>
 						</Section>
 						<Section heightPadding>
 							<Button primary raised> primary raised</Button>

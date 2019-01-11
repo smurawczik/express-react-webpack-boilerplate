@@ -1,0 +1,40 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
+.checkbox {
+	@include selectableFieldBase();
+	.checkbox {
+		&-label {
+			@include selectableFieldLabel();
+			margin-left: $s-gutter;
+		}
+
+		&-field-mimic {
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			&:before {
+				position: absolute;
+				content: '';
+				width: 18px;
+				height: 18px;
+				border: 2px solid material-color($background);
+				border-radius: 4px;
+				background-color: white;
+				color: white;
+			}
+
+			&-has-value {
+				&:before {
+					font-family: FontAwesome;
+					content: "\f00c";
+					font-size: 12px;
+					border-color: material-color($primary);
+					background-color: material-color($primary);
+					text-align: center;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+}

@@ -25,7 +25,7 @@ class Input extends React.Component {
 	}
 
 	render() {
-		const { type, label, message, id } = this.props;
+		const { name, type, label, message, id } = this.props;
 		const { value } = this.state;
 
 		const containerClasses = classnames('input');
@@ -38,7 +38,7 @@ class Input extends React.Component {
 
 		return (
 			<div className={containerClasses}>
-				<input className={inputClasses} id={id} type={type} onChange={this.onChange} value={value} />
+				<input name={name} className={inputClasses} id={id} type={type} onChange={this.onChange} value={value} />
 				<label className={labelClasses} htmlFor={id}>{label}</label>
 				<div className={borderClasses}></div>
 				{ message && <span>{message}</span> }
@@ -48,6 +48,7 @@ class Input extends React.Component {
 }
 
 Input.defaultProps = {
+	name: '',
   type: 'text',
   label: '',
   id: '',

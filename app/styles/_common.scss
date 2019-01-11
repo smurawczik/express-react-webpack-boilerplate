@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import './_variables.scss';
 @import './_material-colors-get.scss';
 
@@ -7,6 +8,7 @@
 @import '../components/Section/Section.scss';
 @import '../components/Card/Card.scss';
 @import '../components/List/List.scss';
+@import '../components/Layout/index.scss';
 @import '../components/Form/index.scss';
 
 *, ::after, ::before {
