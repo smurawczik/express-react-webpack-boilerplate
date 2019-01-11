@@ -51,7 +51,7 @@ class Checkbox extends React.Component {
 				<div className={checkboxMimicClasses} onClick={this.onCheckboxClick}>
 					<input name={name} className={checkboxClasses} id={id} type={type} onChange={this.onChange} value={value} />
 				</div>
-				<label className={labelClasses} htmlFor={id} ref={this.checkboxLabel}>{label}</label>
+				{ label && <label className={labelClasses} htmlFor={id} ref={this.checkboxLabel}>{label}</label> }
 				{ message && <span>{message}</span> }
 			</div>
 		);

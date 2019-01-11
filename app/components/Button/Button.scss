@@ -36,6 +36,10 @@
 				color: material-color($secondary, '500');
 				border-color: material-color($secondary, '500');
 			}
+
+			&:focus {
+				outline: 0;
+			}
 		}
 
 		&--raised {

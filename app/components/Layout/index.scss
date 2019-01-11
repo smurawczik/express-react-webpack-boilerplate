@@ -1,3 +1,6 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_material-colors-get.scss';
+
 .layout {
 	display: flex;
 
@@ -54,5 +57,16 @@
 			align-items: stretch;
 		}
 
+	}
+}
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+	padding: $l-gutter 0;
+	&.container {
+		&--liquid {
+			max-width: 100%;
+		}
 	}
 }

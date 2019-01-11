@@ -1,0 +1,37 @@
+.table {
+	background-color: white;
+	box-shadow: $common-shadow;
+	width: 100%;
+	border-collapse: collapse;
+	.table-head {
+		background-color: material-color($background, '200');
+	}
+	
+	&-bordered {
+		.table-head-data, .table-data {
+			border-right-width: 1px;
+			border-right-style: solid;
+			border-right-color: material-color($background, '300');
+			&:last-child {
+				border-right: 0;
+			}
+		}
+
+		.table-body {
+			.table-row {
+				border-top: 1px solid material-color($background, '200');
+				&:first-child {
+					border-top-color: material-color($background, '300');
+				}
+			}
+		}
+		
+		.table-data {
+			border-right-color: material-color($background, '200');
+		}
+	}
+
+	.table-data, .table-head-data {
+		padding: $s-gutter;
+	}
+}

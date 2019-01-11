@@ -3,6 +3,19 @@
 
 .input {
 	position: relative;
+	&:hover {
+		.input-border:before {
+			transition: all .25s;
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			height: 2px;
+			background-color: material-color($primary, '500');
+			bottom: 0;
+		}
+	}
+
 	.input {
 		&-label {
 			position: absolute;
