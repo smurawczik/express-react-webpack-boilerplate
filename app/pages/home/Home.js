@@ -24,6 +24,29 @@ class Home extends React.Component {
 			<div>
 				<Nav path={this.props.path} />
 				<Container>
+					<Table>
+						<TableHead>
+							<TableRow>
+								<TableHeadData>head 1</TableHeadData>
+								<TableHeadData>head 2</TableHeadData>
+								<TableHeadData>head 3</TableHeadData>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							<TableRow>
+								<TableData>data 1</TableData>
+								<TableData>data 2</TableData>
+								<TableData>data 3</TableData>
+							</TableRow>
+							<TableRow>
+								<TableData>data 1</TableData>
+								<TableData>data 2</TableData>
+								<TableData>data 3</TableData>
+							</TableRow>
+						</TableBody>
+					</Table>
+				</Container>
+				<Container>
 					<Table bordered>
 						<TableHead>
 							<TableRow>
@@ -50,10 +73,12 @@ class Home extends React.Component {
 					<Card borderedSecondary>
 						<span>Card</span>
 						<Container>
-							<Input id='some-id' label='label' />
+							<Row stretchChildren>
+								<Input id='some-id' label='label' />
+								<Input id='some-id' label='label' value='some value' />
+							</Row>
 						</Container>
 						<Container>
-							<Input id='some-id' label='label' value='some value' />
 							<Checkbox id='other' label='label' />
 							<Checkbox id='other-2' label='label 2' />
 							<Checkbox id='other-3' label='label 3' />

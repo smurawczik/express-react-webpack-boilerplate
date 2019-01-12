@@ -3,6 +3,12 @@
 
 .input {
 	position: relative;
+	padding: $gutter 0;
+
+	&-inner {
+		position: relative;
+	}
+
 	&:hover {
 		.input-border:before {
 			transition: all .25s;

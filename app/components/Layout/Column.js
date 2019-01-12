@@ -15,6 +15,7 @@ const Column = (props) => {
 		'layout--align-center': props.alignCenter,
 		'layout--align-baseline': props.alignBaseline,
 		'layout--align-stretch': props.alignStretch,
+		'layout--stretch': props.stretchChildren,
 	})
 
 	return (

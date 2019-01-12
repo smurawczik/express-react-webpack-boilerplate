@@ -3,9 +3,10 @@ const classnames = require('classnames')
 
 class Table extends React.Component {
 	render() {
+		const { bordered, selectable } = this.props;
+
 		const classes = classnames('table', {
-			'table-bordered': this.props.bordered,
-			'table-selectable': this.props.selectable,
+			'table-bordered': bordered,
 		})
 
 		return (

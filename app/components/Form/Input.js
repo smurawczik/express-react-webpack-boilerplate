@@ -29,6 +29,7 @@ class Input extends React.Component {
 		const { value } = this.state;
 
 		const containerClasses = classnames('input');
+		const innerContainerClasses = classnames('input-inner');
 		const labelClasses = classnames('input-label');
 		const inputClasses = classnames('input-field', {
 			'input--has-value': value
@@ -38,10 +39,12 @@ class Input extends React.Component {
 
 		return (
 			<div className={containerClasses}>
-				<input name={name} className={inputClasses} id={id} type={type} onChange={this.onChange} value={value} />
-				<label className={labelClasses} htmlFor={id}>{label}</label>
-				<div className={borderClasses}></div>
-				{ message && <span>{message}</span> }
+				<div className={innerContainerClasses}>
+					<input name={name} className={inputClasses} id={id} type={type} onChange={this.onChange} value={value} />
+					<label className={labelClasses} htmlFor={id}>{label}</label>
+					<div className={borderClasses}></div>
+					{ message && <span>{message}</span> }
+				</div>
 			</div>
 		);
 	}
