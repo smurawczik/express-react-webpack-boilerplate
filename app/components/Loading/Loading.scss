@@ -1,10 +1,10 @@
 .loading {
   .loading-background {
     height: 5px;
-    border-radius: 15px;
     background-color: lighten(material-color($primary), 30%);
     width: 100%;
     position: relative;
+
 
     .loading-progress {
       background-color: material-color($primary);
@@ -12,8 +12,19 @@
       position: absolute;
       left: 0;
       width: 0;
-      border-radius: 15px;
       transition: all .25s;
+    }
+  }
+  
+  &.loading-small {
+    .loading-progress, .loading-background {
+      height: 2px;
+    }
+  }
+
+  &.loading-large {
+    .loading-progress, .loading-background {
+      height: 8px;
     }
   }
 
@@ -55,7 +66,6 @@
       stroke-dasharray: 150,200;
       stroke-dashoffset: -10;
       animation: dash 1.5s ease-in-out infinite, color 3s ease-in-out infinite;
-      stroke-linecap: round;
       stroke: material-color($primary);
     }
   }

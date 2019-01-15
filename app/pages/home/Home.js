@@ -12,12 +12,6 @@ const ListItem = require('../../components/List/ListItem.js')
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.click = this.click.bind(this);
-	}
-
-	click() {
-		alert('click');
 	}
 
 	render() {
@@ -34,10 +28,18 @@ class Home extends React.Component {
 							<Loading circular />
 							<Loading circular large />
 						</Row>
+						<p>Loader - Linear small</p>
+						<Loading progress={80} small />
 						<p>Loader - Linear</p>
 						<Loading progress={50} />
+						<p>Loader - Linear large</p>
+						<Loading progress={20} large />
+						<p>Loader - Linear indeterminate small</p>
+						<Loading indeterminate small />
 						<p>Loader - Linear indeterminate</p>
 						<Loading indeterminate />
+						<p>Loader - Linear indeterminate large</p>
+						<Loading indeterminate large />
 					</Card>
 				</Container>
 				<Container>
