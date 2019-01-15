@@ -4,9 +4,18 @@ const classnames = require('classnames')
 const Loading = (props) => {
 	const classes = classnames('loading', {
 		'loading-circular': props.circular,
-		'loading-circular-small': props.small,
-		'loading-circular-large': props.large,
+		'loading-small': props.small,
+		'loading-large': props.large,
+		'loading-indeterminate': props.indeterminate,
 	})
+
+	let loadingProgressProps = {
+		className: 'loading-progress',
+	}
+
+	if (!props.indeterminate) {
+		loadingProgressProps = Object.assign(loadingProgressProps, { style: {width: (props.progress || 0) + '%'}});
+	}
 
 	return (
 		<div className={classes}>
@@ -18,7 +27,7 @@ const Loading = (props) => {
 		    </svg>
 		    :
 		    <div className='loading-background'>
-		    	<div className='loading-progress' style={{width: (props.progress || 0) + '%'}}></div>
+		    	<div {...loadingProgressProps}></div>
 		    </div>
 			}
 		</div>
