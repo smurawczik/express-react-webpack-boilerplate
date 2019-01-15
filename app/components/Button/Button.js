@@ -10,9 +10,12 @@ const Button = (props) => {
 		'button--text': props.text,
 	})
 
+	const bubbleClasses = classnames('button--ripple')
+
 	return (
 		<button className={classes}>
 			{props.children}
+			<span className={bubbleClasses}></span>
 		</button>
 	);
 }

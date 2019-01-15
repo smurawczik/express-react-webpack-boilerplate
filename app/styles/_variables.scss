@@ -11,6 +11,9 @@ $text-secondary: #FFF;
 
 $common-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 
+$rippleBackground: rgba(0, 0, 0, 0.05);
+$lightRippleBackground: rgba(255, 255, 255, 0.15);
+
 @mixin selectableFieldBase() {
   position: relative;
 	display: inline-block;

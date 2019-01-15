@@ -117,11 +117,13 @@ class Home extends React.Component {
 						</Container>
 					</Card>
 					<Container>
-						<Button secondary> secondary </Button>
-						<Button primary outline> primary outline </Button>
-						<Button secondary outline> secondary outline </Button>
-						<Button primary text> primary text </Button>
-						<Button secondary text> secondary text </Button>
+						<Row justifySpaceAround>
+							<Button secondary> secondary </Button>
+							<Button primary outline> primary outline </Button>
+							<Button secondary outline> secondary outline </Button>
+							<Button primary text> primary text </Button>
+							<Button secondary text> secondary text </Button>
+						</Row>
 					</Container>
 					<Container>
 						<List>
