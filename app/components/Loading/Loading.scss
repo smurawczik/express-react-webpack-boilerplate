@@ -13,6 +13,14 @@
       left: 0;
       width: 0;
       border-radius: 15px;
+      transition: all .25s;
+    }
+  }
+
+  &-indeterminate {
+    overflow: hidden;
+    .loading-progress {
+      animation: indeterminate 1.5s ease-in-out infinite
     }
   }
 
@@ -22,12 +30,12 @@
     width: 75px;
     height: 75px;
 
-    &-small {
+    &.loading-small {
       width: 30px;
       height: 30px;
     }
 
-    &-large {
+    &.loading-large {
       width: 150px;
       height: 150px;
     }
@@ -50,6 +58,22 @@
       stroke-linecap: round;
       stroke: material-color($primary);
     }
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -50%;
+    width: 50%;
+  }
+
+  97% {
+    width: 50%;
+  }
+
+  100% {
+    left: 110%;
+    width: 10%;
   }
 }
 

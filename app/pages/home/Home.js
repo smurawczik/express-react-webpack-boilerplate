@@ -36,6 +36,8 @@ class Home extends React.Component {
 						</Row>
 						<p>Loader - Linear</p>
 						<Loading progress={50} />
+						<p>Loader - Linear indeterminate</p>
+						<Loading indeterminate />
 					</Card>
 				</Container>
 				<Container>
