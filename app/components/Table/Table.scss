@@ -4,14 +4,14 @@
 	width: 100%;
 	border-collapse: collapse;
 	.table-head {
-		background-color: material-color($background, '200');
+		background-color: lighten(material-color($background, '200'), 3%);
 	}
 	
 	&-bordered {
 		.table-head-data, .table-data {
 			border-right-width: 1px;
 			border-right-style: solid;
-			border-right-color: material-color($background, '300');
+			border-right-color: lighten(material-color($background, '300'), 3%);
 			&:last-child {
 				border-right: 0;
 			}
@@ -19,15 +19,15 @@
 
 		.table-body {
 			.table-row {
-				border-top: 1px solid material-color($background, '200');
+				border-top: 1px solid lighten(material-color($background, '200'), 3%);
 				&:first-child {
-					border-top-color: material-color($background, '300');
+					border-top-color: lighten(material-color($background, '300'), 3%);
 				}
 			}
 		}
 		
 		.table-data {
-			border-right-color: material-color($background, '200');
+			border-right-color: lighten(material-color($background, '200'), 3%);
 		}
 	}
 

@@ -3,6 +3,7 @@ const Nav = require('../../components/Nav/Nav.js')
 const Card = require('../../components/Card/Card.js')
 const Button = require('../../components/Button/Button.js')
 const List = require('../../components/List/List.js')
+const Loading = require('../../components/Loading/Loading.js')
 const { Table, TableBody, TableRow, TableHead, TableHeadData, TableData } = require('../../components/Table/')
 const { Input, Checkbox, Radio } = require('../../components/Form/')
 const { Container, Row, Column } = require('../../components/Layout/')
@@ -23,6 +24,20 @@ class Home extends React.Component {
 		return (
 			<div>
 				<Nav path={this.props.path} />
+				<Container>
+					<Card>
+						<p>Loaders - Circular</p>
+						<Row alignCenter>
+							<Loading circular large />
+							<Loading circular />
+							<Loading circular small />
+							<Loading circular />
+							<Loading circular large />
+						</Row>
+						<p>Loader - Linear</p>
+						<Loading progress={50} />
+					</Card>
+				</Container>
 				<Container>
 					<Table>
 						<TableHead>
