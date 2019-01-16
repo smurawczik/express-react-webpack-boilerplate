@@ -3,14 +3,15 @@ const classnames = require('classnames')
 
 const Loading = (props) => {
 	const classes = classnames('loading', {
-		'loading-circular': props.circular,
-		'loading-small': props.small,
-		'loading-large': props.large,
-		'loading-indeterminate': props.indeterminate,
+		'loading--circular': props.circular,
+		'loading--small': props.small,
+		'loading--large': props.large,
+		'loading--shadow': props.shadow,
+		'loading--indeterminate': props.indeterminate,
 	})
 
 	let loadingProgressProps = {
-		className: 'loading-progress',
+		className: 'loading--progress',
 	}
 
 	if (!props.indeterminate) {
@@ -22,11 +23,11 @@ const Loading = (props) => {
 			{
 				props.circular
 				?
-				<svg className="loading-circular-svg"viewBox="25 25 50 50" >
-		      <circle className="loading-path-svg" cx="50" cy="50" r="20" fill="none" stroke="#70c542" strokeWidth="3" />
+				<svg className="loading--circular--svg"viewBox="25 25 50 50" >
+		      <circle className="loading--path--svg" cx="50" cy="50" r="20" fill="none" stroke="#70c542" strokeWidth="3" />
 		    </svg>
 		    :
-		    <div className='loading-background'>
+		    <div className='loading--background'>
 		    	<div {...loadingProgressProps}></div>
 		    </div>
 			}
