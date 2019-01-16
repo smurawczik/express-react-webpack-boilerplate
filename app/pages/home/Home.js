@@ -69,9 +69,9 @@ class Home extends React.Component {
 					<Table bordered>
 						<TableHead>
 							<TableRow>
-								<TableHeadData>head 1</TableHeadData>
-								<TableHeadData>head 2</TableHeadData>
-								<TableHeadData>head 3</TableHeadData>
+								<TableHeadData colspan={3}>
+									head 1
+								</TableHeadData>
 							</TableRow>
 						</TableHead>
 						<TableBody>

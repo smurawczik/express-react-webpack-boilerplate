@@ -6,7 +6,7 @@ class TableHeadData extends React.Component {
 		const classes = classnames('table-head-data')
 
 		return (
-			<th className={classes}>
+			<th className={classes} colSpan={this.props.colspan}>
 				{this.props.children}
 			</th>
 		);

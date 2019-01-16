@@ -6,7 +6,7 @@ class TableData extends React.Component {
 		const classes = classnames('table-data')
 
 		return (
-			<td className={classes}>
+			<td className={classes} colSpan={this.props.colspan}>
 				{this.props.children}
 			</td>
 		);
