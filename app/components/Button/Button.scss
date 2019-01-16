@@ -17,9 +17,20 @@
 	}
 	
 	&:active {
+		&:hover {
+			&:after {
+				background-color: $rippleBackground !important;	
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
 		.button--ripple {
 			&:before {
-				animation: ripple .5s ease-out;
+				animation: ripple .75s ease-out .15s both;
 			}
 		}
 	}
@@ -31,6 +42,7 @@
 		right: 0;
 		bottom: -150%;
 		left: 0;
+		z-index: 999;
 		&:before {
 			position: absolute;
 			content: '';
@@ -119,7 +131,14 @@
 }
 
 @keyframes ripple {
-	65% {
+	0% {
+		height: 0;
+		width: 0;
+		left: 50%;
+		top: 50%;
+		opacity: .5;
+	}
+	50% {
 		width: 100%;
 		height: 100%;
 		top: 0;

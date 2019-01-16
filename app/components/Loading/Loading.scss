@@ -1,12 +1,16 @@
 .loading {
-  .loading-background {
+  &--shadow {
+    box-shadow: 0 0 10px lighten(material-color($primary), 30%);
+  }
+
+  .loading--background {
     height: 5px;
     background-color: lighten(material-color($primary), 30%);
     width: 100%;
     position: relative;
 
 
-    .loading-progress {
+    .loading--progress {
       background-color: material-color($primary);
       height: 5px;
       position: absolute;
@@ -16,42 +20,42 @@
     }
   }
   
-  &.loading-small {
-    .loading-progress, .loading-background {
+  &.loading--small {
+    .loading--progress, .loading--background {
       height: 2px;
     }
   }
 
-  &.loading-large {
-    .loading-progress, .loading-background {
+  &.loading--large {
+    .loading--progress, .loading--background {
       height: 8px;
     }
   }
 
-  &-indeterminate {
+  &--indeterminate {
     overflow: hidden;
-    .loading-progress {
+    .loading--progress {
       animation: indeterminate 1.5s ease-in-out infinite
     }
   }
 
-  &.loading-circular {
+  &.loading--circular {
     position: relative;
     margin: 0px auto;
     width: 75px;
     height: 75px;
 
-    &.loading-small {
+    &.loading--small {
       width: 30px;
       height: 30px;
     }
 
-    &.loading-large {
+    &.loading--large {
       width: 150px;
       height: 150px;
     }
     
-    .loading-circular-svg {
+    .loading--circular--svg {
       animation: rotate 2s linear infinite;
       height: 100%;
       transform-origin: center center;
@@ -62,7 +66,7 @@
       margin: auto;
     }
 
-    .loading-path-svg {
+    .loading--path--svg {
       stroke-dasharray: 150,200;
       stroke-dashoffset: -10;
       animation: dash 1.5s ease-in-out infinite, color 3s ease-in-out infinite;
@@ -112,13 +116,13 @@
   0% {
     stroke: material-color($primary);
   }
-  45% {
+  49% {
     stroke: material-color($primary);
   }
   50% {
-    stroke: material-color($secondary);
+    stroke: material-color($primary);
   }
-  95% {
-    stroke: material-color($secondary);
+  99% {
+    stroke: material-color($primary);
   }
 }

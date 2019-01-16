@@ -30,14 +30,14 @@ class Home extends React.Component {
 						</Row>
 						<p>Loader - Linear small</p>
 						<Loading progress={80} small />
-						<p>Loader - Linear</p>
-						<Loading progress={50} />
+						<p>Loader - Linear shadow</p>
+						<Loading progress={50} shadow />
 						<p>Loader - Linear large</p>
 						<Loading progress={20} large />
 						<p>Loader - Linear indeterminate small</p>
 						<Loading indeterminate small />
-						<p>Loader - Linear indeterminate</p>
-						<Loading indeterminate />
+						<p>Loader - Linear indeterminate shadow</p>
+						<Loading indeterminate shadow />
 						<p>Loader - Linear indeterminate large</p>
 						<Loading indeterminate large />
 					</Card>
